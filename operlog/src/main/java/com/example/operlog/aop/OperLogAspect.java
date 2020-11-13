@@ -275,4 +275,25 @@ public class OperLogAspect {
         currentTime.remove();
     }*/
 
+/*    StringBuilder params = new StringBuilder("{");
+    //参数值
+    Object[] argValues = joinPoint.getArgs();
+    //参数名称
+    String[] argNames = ((MethodSignature)joinPoint.getSignature()).getParameterNames();
+        if(argValues != null){
+        for (int i = 0; i < argValues.length; i++) {
+            params.append(" ").append(argNames[i]).append(": ").append(argValues[i]);
+        }
+            *//*
+            *             //如果是文件对象
+            if (value instanceof MultipartFile) {
+                MultipartFile file = (MultipartFile) value;
+                value = file.getOriginalFilename();  //获取文件名
+            }
+            * *//*
+
+        params.append("}");
+    }
+    StringBuffer loginfo=new StringBuffer();*/
+
 }

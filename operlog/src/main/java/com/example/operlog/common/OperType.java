@@ -25,4 +25,5 @@ public enum OperType {
 
     public void setType(String type) {
         this.type = type;
-    }}
+    }
+}

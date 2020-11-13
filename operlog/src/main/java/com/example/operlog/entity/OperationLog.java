@@ -29,7 +29,6 @@ public class OperationLog {
     private String operIp;//请求ID
     private String excName;//异常名称
     private String errorMsg;//错误信息
-    private byte[] msg;
     private Date createTime;//操作时间
     private Long costTime;//耗时
 
