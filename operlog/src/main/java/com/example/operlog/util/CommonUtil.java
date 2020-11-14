@@ -1,6 +1,17 @@
 package com.example.operlog.util;
 
+import org.apache.commons.io.FileUtils;
+import org.lionsoul.ip2region.DataBlock;
+import org.lionsoul.ip2region.DbConfig;
+import org.lionsoul.ip2region.DbSearcher;
+import org.springframework.core.io.ClassPathResource;
+
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Method;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
@@ -52,5 +63,6 @@ public class CommonUtil {
 
             return request.getHeader("User-Agent");
         }
+
 
 }

@@ -118,6 +118,7 @@ public class OperLogAspect {
             // 处理设置注解上的参数
             getControllerMethodDescription(joinPoint, aopLog, operLog);
 
+            operLog.setOperLocation(IpUtils.getAddress(operLog.getOperIp()));
             //利用是否有异常定性记录失败信息
             if (e != null)
             {

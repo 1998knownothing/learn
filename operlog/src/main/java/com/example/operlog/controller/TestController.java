@@ -3,8 +3,12 @@ package com.example.operlog.controller;
 import com.example.operlog.annotation.Log;
 import com.example.operlog.common.OperType;
 import com.example.operlog.entity.User;
+import com.example.operlog.util.CommonUtil;
+import com.example.operlog.util.IpUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.Map;
 
 /**
  * @program: learn
@@ -52,5 +56,12 @@ public class TestController {
     @Log
     public void uploadFile1(@RequestBody User param){
         System.out.println("=======upload file1");
+    }
+    @GetMapping("/5")
+    @Log
+    public Object uploadFile5(){
+
+        String address = IpUtils.getAddress("223.73.198.16");
+        return address;
     }
 }
