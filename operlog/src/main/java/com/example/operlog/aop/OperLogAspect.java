@@ -125,7 +125,6 @@ public class OperLogAspect {
                 operLog.setStatus(0);//失败
                 operLog.setExcName(e.getClass().getName());
                 operLog.setErrorMsg(ThrowableUtil.getStackTrace(e));
-
                 log.error("耗时:{}  用户id:{}   用户名username: {}  请求ip:{}  User-Agent:{} 方法路径:{} 方法参数:{}",
                         operLog.getCostTime(),
                         operLog.getOperUserId(),

@@ -6,24 +6,17 @@ package com.example.operlog.util;
  * @author: Mr.liu
  * @create: 2020-11-14 00:23
  **/
-import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 import org.apache.commons.io.FileUtils;
 import org.lionsoul.ip2region.DataBlock;
 import org.lionsoul.ip2region.DbConfig;
 import org.lionsoul.ip2region.DbSearcher;
-import org.lionsoul.ip2region.Util;
 import org.springframework.core.io.ClassPathResource;
 
 import java.io.File;
 import java.io.IOException;
 
-/**
- * ip查询处理
- *
- * @author videomonster
- */
 @Slf4j
 public final class IpUtils {
 
