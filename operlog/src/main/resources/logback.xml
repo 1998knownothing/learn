@@ -57,7 +57,8 @@
             <onMismatch>DENY</onMismatch>
         </filter>
     </appender>
-	
+<!--    private static final Logger sys_user_logger = LoggerFactory.getLogger("sys-user");
+    sys_user_logger.info("");-->
 	<!-- 用户访问日志输出  -->
     <appender name="sys-user" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>${log.path}/sys-user.log</file>
