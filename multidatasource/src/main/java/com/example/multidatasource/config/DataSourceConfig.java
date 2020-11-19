@@ -35,6 +35,7 @@ public class DataSourceConfig {
         return DruidDataSourceBuilder.create().build();
     }
     @Bean
+    // @ConditionalOnProperty(prefix = "spring.datasource", name = "slave", matchIfMissing = true)
     @ConfigurationProperties(prefix = "spring.datasource.slave1")
     public DataSource slave1DataSource(){
         return DruidDataSourceBuilder.create().build();
@@ -44,6 +45,7 @@ public class DataSourceConfig {
     public DataSource slave2DataSource(){
         return DruidDataSourceBuilder.create().build();
     }
+    //@Autowired(required = false) @Qualifier("slaveDb") DataSource slaveDataSource
     @Bean
     public DataSource myRoutingDataSource(@Qualifier("masterDataSource") DataSource masterDataSource,
     @Qualifier("slave1DataSource") DataSource slave1DataSource,
@@ -80,12 +82,12 @@ public class DataSourceConfig {
 
 /*    spring.datasource.master.jdbc-url= jdbc:mysql://localhost:3306/db01?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
     spring.datasource.master.username= root
-    spring.datasource.master.password= 1158982120fire
+    spring.datasource.master.password= 123456
     spring.datasource.master.driver-class-name= com.mysql.jdbc.Driver
 
     spring.datasource.slave1.jdbc-url= jdbc:mysql://localhost:3306/db02?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
     spring.datasource.slave1.username= root
-    spring.datasource.slave1.password= 1158982120fire
+    spring.datasource.slave1.password= 123456
     spring.datasource.slave1.driver-class-name= com.mysql.jdbc.Driver
 
     spring.datasource.slave2.jdbc-url= jdbc:mysql://localhost:3306/db03?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC

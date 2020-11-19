@@ -39,4 +39,17 @@ public class MybatisConfig {
     public PlatformTransactionManager platformTransactionManager() {
         return new DataSourceTransactionManager(myRoutingDataSource);
     }
+
+
+/*
+    @Bean
+    public SqlSessionTemplate sqlTemplate(@Qualifier("sessionFactory") SqlSessionFactory sqlSessionFactory) {
+        return new SqlSessionTemplate(sqlSessionFactory);
+    }
+    @Bean(name = "dataSourceTx")
+    public DataSourceTransactionManager dataSourceTx(@Qualifier("dynamicDb") DataSource dynamicDataSource) {
+        DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager();
+        dataSourceTransactionManager.setDataSource(dynamicDataSource);
+        return dataSourceTransactionManager;
+    }*/
 }
